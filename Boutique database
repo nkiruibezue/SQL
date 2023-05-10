@@ -1,0 +1,25 @@
+--CREATE a boutique store database
+
+CREATE TABLE cioni_boutique (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size TEXT, price INTEGER);
+
+INSERT INTO cioni_boutique VALUES (1, "top", "pink", "S", 5);
+INSERT INTO cioni_boutique VALUES (2, "top", "pink", "M", 5);
+INSERT INTO cioni_boutique VALUES (3, "top", "pink", "L", 5);
+INSERT INTO cioni_boutique VALUES (4, "jeans", "blue", "S", 15);
+INSERT INTO cioni_boutique VALUES (5, "jeans", "blue", "M", 15);
+INSERT INTO cioni_boutique VALUES (6, "jeans", "blue", "L", 15);
+INSERT INTO cioni_boutique VALUES (7, "sneakers", "white", "S", 30); 
+INSERT INTO cioni_boutique VALUES (8, "sneakers", "white", "M", 30);
+INSERT INTO cioni_boutique VALUES (9, "sneakers", "white", "L", 30);
+INSERT INTO cioni_boutique VALUES (10, "socks", "black", "S", 7);
+INSERT INTO cioni_boutique VALUES (11, "socks", "black", "M", 7);
+INSERT INTO cioni_boutique VALUES (12, "socks", "black", "L", 7);
+INSERT INTO cioni_boutique VALUES (13, "stockings", "black", "S", 10);
+INSERT INTO cioni_boutique VALUES (14, "stockings", "black", "M", 10);
+INSERT INTO cioni_boutique VALUES (15, "stockings", "black", "L", 10);
+
+-- display the database ordered by price
+SELECT * FROM cioni_boutique WHERE price < 13 ORDER BY price;
+
+-- display the database of all pink clothing
+SELECT * FROM cioni_boutique WHERE color is "pink";
